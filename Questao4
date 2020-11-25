@@ -1,0 +1,16 @@
+# coding=utf-8
+# -*- coding: latinI -*-
+
+num = int(input("Digite um numero: "))
+
+if (num >= 1) & (num <= 100):
+
+    if num % 2 == 1:
+
+      print("Este número é primo")
+
+    else:
+      print("Este número é não primo")
+
+else:
+    print ("O número é maior que 100")
