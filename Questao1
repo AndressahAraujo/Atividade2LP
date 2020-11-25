@@ -1,0 +1,30 @@
+from datetime import *
+
+idade_dias = timedelta(days=int(input("Informe o numero de dias:")))
+atual = date.today()
+aniversario = atual - idade_dias
+
+anos = atual.year - aniversario.year
+meses = 0
+dias = 0
+
+if atual.month > aniversario.month :
+    meses = atual.month - aniversario.month
+    if atual.day >= aniversario.day:
+        dias = atual.day - aniversario.day
+    else:
+        meses-=1
+        dias = (atual - date(atual.year, atual.month - 1, aniversario.day)).days
+elif atual.month == aniversario.month:
+    if atual.day > aniversario.day :
+        dias = atual.day - aniversario.day
+    elif atual.day < aniversario.day:
+        meses = 11
+        dias = aniversario.day - atual.day
+    else:
+        meses = 12 - (aniversario.month - atual.month)
+        dias = (atual - date(atual.year, atual.month - 1, aniversario.day)).days
+
+
+    print("Idade:")
+    print(str(anos) + " anos, "+str(meses)+ " meses e "+ str(dias)+" dias")
