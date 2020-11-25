@@ -1,0 +1,21 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+import math
+
+print ("Digite o número A: ")
+a = int (input ())
+
+print ("Digite o número B: ")
+b = int (input ())
+
+print ("Digite o número C: ")
+c = int (input ())
+
+if (a < b) & (a < b):
+    print ("A é o menor número")
+
+elif (b < c) & (b < a):
+    print ("B é o menor número")
+
+elif (c < b) & (c < a):
+    print ("C é o menor número")
